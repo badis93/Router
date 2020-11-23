@@ -1,15 +1,8 @@
 import React from 'react';
 import {Link} from "react-router-dom"
-import Description from './Description';
-import Home from './Home';
-import { useState } from 'react';
 
 function ObjectMovie() {
-    const [descrip,setDescrip] = useState("");
-    const setdescription = (description) => {
-      setDescrip(description);
-  
-     }
+    
 return (
     <div>
                 <ul style={{display : "flex"}} >
