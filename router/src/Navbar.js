@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from "react-router-dom"
 
-function ObjectMovie() {
+function Navbar() {
     
 return (
     <div>
@@ -23,4 +23,4 @@ return (
 }
 
 
-export default ObjectMovie;
+export default Navbar;

@@ -1,8 +1,9 @@
 
 import React from 'react';
 import Home from './Home';
-import ObjectMovie from './ObjectMovie';
+import Navbar from './Navbar';
 import Description from './Description';
+import MovieCard from './MovieCard';
 
 import {BrowserRouter as Router, Route} from "react-router-dom"
 
@@ -14,10 +15,14 @@ function App () {
         <div>
 
        <Router>
-         <ObjectMovie/>
+         <Navbar/>
                 <Route path="/" exact component={Home} />
                 
-                <Route path="/Description" exact component={Description} />
+                <Route path="/Description" exact  />
+
+                <Route path="/MovieCard" exact component={MovieCard} />
+
+
               
 
        </Router>

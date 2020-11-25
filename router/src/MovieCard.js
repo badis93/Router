@@ -2,13 +2,15 @@ import Card from 'react-bootstrap/Card'
 import StarRatingComponent from 'react-star-rating-component';
 import {ListGroup,ListGroupItem}  from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import {Link} from "react-router-dom"
+import {Route} from "react-router-dom"
+//import {MoviesData} from './MoviesData';
+//import { useState } from 'react';
 
 
 function MovieCard(props) {
- const edit = () => {
-  props.setdescription(props.movies.overview);
-
- }
+ console.log(props.movies);
+ //const [movie] = useState(MoviesData);
 
     return (
      
@@ -33,13 +35,17 @@ function MovieCard(props) {
     <ListGroupItem>{props.movies.release_date}</ListGroupItem>
    
   </ListGroup>
+  {
+        <div key={props.movies.id}>
+          <Link to={`/MovieCard/${props.movies.id}`}>{props.movies.title}</Link>
+         
 
-  <button onClick={() => {
+        </div>
+      }
 
-props.setdescr(true); 
-edit();
-} 
-  }> Description</button>
+<Route path={`/MovieCard/${props.movies.id}`} render={() => <h1>Home</h1>} />
+
+      
   
 </Card>
 
